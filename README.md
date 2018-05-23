@@ -4,16 +4,18 @@ Easily download session from Microsoft Channel 9 events sessions like //build
 ## requirements
 python3
 
-## install dependencies
+## clone and install dependencies
 ```
+git clone https://github.com/guybartal/Channel9SessionsDownloader.git
+cd Channel9SessionsDownloader
 pip install -r requirements.txt
 ```
 
-## configuration
+## configure
 change config.py:
 
 ```
-feed_url = 'rss feed url for example: https://s.ch9.ms/Events/Build/2018/RSS/mp4high'
+feed_url = 'rss feed url for example: https://s.ch9.ms/Events/Build/2018/RSS/mp4high you can find other rss links in https://channel9.msdn.com/Browse/Events'
 
 output_dir = 'output folder to store videos, for example: C:\\Users\\gubert\\Videos\\build2018'
 
