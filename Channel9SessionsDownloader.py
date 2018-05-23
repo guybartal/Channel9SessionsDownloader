@@ -62,16 +62,17 @@ class Channel9SessionsDownloader:
 
             print(f"downloading '{v['title']}', file size: {self.humanbytes(v['size'])}....")
             url = v['url']
-            file_name = os.path.join(self.output_dir, v['title'].replace('/','').replace('\\','')) + "_" + url[url.rfind("/")+1:]
+            file_name = os.path.join(self.output_dir, v['title'].replace('/',',').replace('\\',',').replace(':',',').replace('*','').replace('?','').replace('\"','').replace('<','').replace('>','').replace('|',',')) + "_" + url[url.rfind("/")+1:]
  
             if os.path.exists(file_name):
                 if (os.path.getsize(file_name) > 0):
-                    print(f"file '{v['title']}' already exists")
+                    print(f"file '{file_name}' already exists")
                     continue;
                     
-            out_file = open(file_name, mode='wb')
+
             response = urllib.request.urlopen(url)
             data = response.read()
+            out_file = open(file_name, mode='wb')
             out_file.write(data)
             out_file.close()
 
