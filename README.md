@@ -1,12 +1,15 @@
-## Channel9 sessions downloader
+# Channel9 sessions downloader
 Easily download session from Microsoft Channel 9 events sessions like //build
 
-# install packages
+## requirements
+python3
+
+## install dependencies
 ```
 pip install -r requirements.txt
 ```
 
-# configuration
+## configuration
 change config.py:
 
 ```
@@ -17,7 +20,7 @@ output_dir = 'output folder to store videos, for example: C:\\Users\\gubert\\Vid
 filter_keywords = list of keyword to filter, for example: ['vscode','iot','ml','ml.net','dl','deeplearning','machine','learning','ai','device','edge','tensorflow','cognitive','function','functions','train','speech','pyhon','aml','vision','serverless','git','unity','databricks','bot','bots','node.js']
 ```
 
-# run
+## run
 ```
 python Channel9SessionsDownloader.py
 ```
