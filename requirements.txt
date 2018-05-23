@@ -1,0 +1,2 @@
+feedparser>=5.2.1
+urllib3>=1.22
